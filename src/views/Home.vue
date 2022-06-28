@@ -17,6 +17,9 @@ import { ROLE, PATH } from "../common/const";
         this.$router.push(PATH.GM_APPROVAL);
       } else if (role === ROLE.SALE_STAFF || role === ROLE.SALE_MANAGER) {
         this.$router.push(PATH.PURCHASE_VIEW)
+      } else if (role === ROLE.FINANCIAL_STAFF) {
+        //author:Hong ZiXian        //Date:2022/06/28
+        this.$router.push(PATH.FINANCIAL_VIEW);
       }
       else {
         this.$router.push("/error");

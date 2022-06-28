@@ -119,6 +119,67 @@
             <span slot="title">审批</span>
           </el-menu-item>
         </el-submenu>
+        <!--author:Hong ZiXian
+        Date:2022/06/28
+        财務人员-->
+        <el-submenu index = "5"
+          v-if="permit(PATH.FINANCIAL_VIEW.requiresAuth)">
+          <template slot = "title">
+            <i class = "el-icon-s-finance"></i>
+            <span slot="title">财务管理</span>
+          </template>
+          <el-menu-item
+            :index="PATH.FINANCIAL_VIEW.path"
+            v-if="permit(PATH.FINANCIAL_VIEW.requiresAuth)"
+          >
+            <i class="el-icon-bank-card"></i>
+            <span slot="title">账户管理</span>
+          </el-menu-item>
+          <el-menu-item
+            :index="PATH.COLLECTION_AND_PAYMENT.path"
+            v-if="permit(PATH.COLLECTION_AND_PAYMENT.requiresAuth)"
+          >
+            <i class="el-icon-document"></i>
+            <span slot="title">制定收付款单</span>
+          </el-menu-item>
+          <el-menu-item
+            :index="PATH.SALARY_TABLE.path"
+            v-if="permit(PATH.SALARY_TABLE.requiresAuth)"
+          >
+            <i class="el-icon-money"></i>
+            <span slot="title">制定工资单</span>
+          </el-menu-item>
+          <el-menu-item
+            :index="PATH.SALES_DETAILS.path"
+            v-if="permit(PATH.SALES_DETAILS.requiresAuth)"
+          >
+            <i class="el-icon-tickets"></i>
+            <span slot="title">查看销售明细表</span>
+          </el-menu-item>
+          <el-menu-item
+            :index="PATH.BUSINESS_HISTORY.path"
+            v-if="permit(PATH.BUSINESS_HISTORY.requiresAuth)"
+          >
+            <i class="el-icon-date"></i>
+            <span slot="title">查看经营历程表</span>
+          </el-menu-item>
+          <el-menu-item
+            :index="PATH.BUSINESS_SITUATION.path"
+            v-if="permit(PATH.BUSINESS_SITUATION.requiresAuth)"
+          >
+            <i class="el-icon-document-copy"></i>
+            <span slot="title">查看经营情况表</span>
+          </el-menu-item>
+          <el-menu-item
+            :index="PATH.OPENING_ACCOUNT_ESTABLISHMENT.path"
+            v-if="permit(PATH.OPENING_ACCOUNT_ESTABLISHMENT.requiresAuth)"
+          >
+            <i class="el-icon-edit-outline"></i>
+            <span slot="title">期初建账</span>
+          </el-menu-item>
+
+          
+        </el-submenu>
       </el-menu>
       <div class="logout-fix">
         <el-tooltip

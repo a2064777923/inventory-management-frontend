@@ -87,5 +87,38 @@ export const PATH = {
   GM_APPROVAL: {
     path: '/approval',
     requiresAuth: [ROLE.GM,ROLE.ADMIN]
-  }
+  },
+  
+  //author:Hong ZiXian
+  //Date:2022/06/28
+  //Finance
+  FINANCIAL_VIEW:{
+    path:'/financialView',
+    requiresAuth:[ROLE.FINANCIAL_STAFF,ROLE.GM,ROLE.ADMIN]
+  },
+  COLLECTION_AND_PAYMENT:{
+    path:'/collectionAndPayment',
+    requiresAuth:[ROLE.FINANCIAL_STAFF,ROLE.GM,ROLE.ADMIN]
+  },
+  SALARY_TABLE:{
+    path:'/salaryTable',
+    requiresAuth:[ROLE.FINANCIAL_STAFF,ROLE.GM,ROLE.ADMIN]
+  },
+  SALES_DETAILS:{
+    path:'/salesDetails',
+    requiresAuth:[ROLE.FINANCIAL_STAFF,ROLE.GM,ROLE.ADMIN]
+  },
+  BUSINESS_HISTORY:{
+    path:'/businessHistory',
+    requiresAuth:[ROLE.FINANCIAL_STAFF,ROLE.GM,ROLE.ADMIN]
+  },
+  BUSINESS_SITUATION:{
+    path:'/businessSituation',
+    requiresAuth:[ROLE.FINANCIAL_STAFF,ROLE.GM,ROLE.ADMIN]
+  },
+  OPENING_ACCOUNT_ESTABLISHMENT:{
+    path:'/openingAccountEstablishment',
+    requiresAuth:[ROLE.FINANCIAL_STAFF,ROLE.GM,ROLE.ADMIN]
+  },
+  
 }

@@ -26,6 +26,16 @@ const SaleView = () => import("../views/sale/SaleView");
 const CustomerView = () => import ("../views/purchase/CustomerView");
 const Approval = () => import("../views/approval/Approval");
 
+//author:Hong ZiXian//Date:2022/06/28
+const FinancialView = () => import("../views/financial/FinancialView");
+const CollectionAndPayment = () => import("../views/financial/CollectionAndPayment");
+const SalaryTable = () => import("../views/financial/SalaryTable");
+const SalesDetails = () => import("../views/financial/SalesDetails");
+const BusinessHistory = () => import("../views/financial/BusinessHistory");
+const BusinessSituation = () => import("../views/financial/BusinessSituation");
+const OpeningAccountEstablishment = () => import("../views/financial/OpeningAccountEstablishment");
+
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -144,6 +154,50 @@ const routes = [
     path: PATH.GM_APPROVAL.path,
     component: Approval,
     meta: { requiresAuth: PATH.GM_APPROVAL.requiresAuth }
+  },
+  //author:Hong ZiXian  //Date:2022/06/28
+  //财務
+  {
+    path: PATH.FINANCIAL_VIEW.path,
+    component: FinancialView,
+    name : "FinancialView",
+    meta:{requiresAuth : PATH.FINANCIAL_VIEW.requiresAuth}
+  },
+  {
+    path: PATH.COLLECTION_AND_PAYMENT.path,
+    component: CollectionAndPayment,
+    name : "CollectionAndPayment",
+    meta:{requiresAuth : PATH.COLLECTION_AND_PAYMENT.requiresAuth},
+    },
+  {
+    path: PATH.SALARY_TABLE.path,
+    component: SalaryTable,
+    name : "SalaryTable",
+    meta:{requiresAuth : PATH.SALARY_TABLE.requiresAuth},
+    },
+  {
+    path: PATH.SALES_DETAILS.path,
+    component: SalesDetails,
+    name : "SalesDetails",
+    meta:{requiresAuth : PATH.SALES_DETAILS.requiresAuth},
+    },
+  {
+     path: PATH.BUSINESS_HISTORY.path,
+     component: BusinessHistory,
+     name : "BusinessHistory",
+     meta:{requiresAuth : PATH.BUSINESS_HISTORY.requiresAuth},
+  },
+  {
+     path: PATH.BUSINESS_SITUATION.path,
+     component: BusinessSituation,
+     name : "BusinessSituation",
+     meta:{requiresAuth : PATH.BUSINESS_SITUATION.requiresAuth},
+  },
+  {
+     path: PATH.OPENING_ACCOUNT_ESTABLISHMENT.path,
+     component: OpeningAccountEstablishment,
+     name : "OpeningAccountEstablishment",
+     meta:{requiresAuth : PATH.OPENING_ACCOUNT_ESTABLISHMENT.requiresAuth},
   },
 
   // -----------------------未找到页面-----------------------------
