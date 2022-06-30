@@ -60,6 +60,15 @@ const SALE_PURCHASE_CREATE = '/api/purchase/sheet-make';
 const SALE_CUSTOMER_QUERY = '/api/customer/findByType';
 const SALE_CUSTOMER_MAX = '/api/sale/maxAmountCustomer';
 
+//author:Hong ZiXian
+//Date:2022/06/29
+//财务人员API
+//帳戶管理
+const BANK_ALL = '/api/bank/getAllBank';
+const BANK_CREATE = '/api/bank/bank-make'
+const BANK_EDIT = '/api/bank/bank-edit'
+const BANK_DELETE = '/api/bank/bank-delete'
+
 module.exports = {
   TEST_GET,
   TEST_POST,
@@ -108,4 +117,12 @@ module.exports = {
   SALE_CUSTOMER_MAX,
   SALE_FIND_SHEET_BY_ID,
   CUSTOMER_QUERY,
+  
+  //author:Hong ZiXian
+  //Date:2022/06/28
+  //财务人员API
+  BANK_ALL,
+  BANK_CREATE,
+  BANK_EDIT,
+  BANK_DELETE,
 };
