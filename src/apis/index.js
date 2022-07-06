@@ -68,6 +68,12 @@ const BANK_ALL = '/api/bank/getAllBank';
 const BANK_CREATE = '/api/bank/bank-make'
 const BANK_EDIT = '/api/bank/bank-edit'
 const BANK_DELETE = '/api/bank/bank-delete'
+//收付款单
+const COLLECTION_CREATE = '/api/payment/collection-sheet-make';
+const PAYMENT_CREATE = '/api/payment/payment-sheet-make';
+const COLLECTION_ALL = '/api/payment/collection-get-all';
+const PAYMENT_ALL ='/api/payment/payment-get-all'
+const TRANSFERMENT_APPROVAL = '/api/payment/transfer-sheet-approval';
 
 module.exports = {
   TEST_GET,
@@ -125,4 +131,9 @@ module.exports = {
   BANK_CREATE,
   BANK_EDIT,
   BANK_DELETE,
+  COLLECTION_CREATE,
+  PAYMENT_CREATE,
+  TRANSFERMENT_APPROVAL,
+  COLLECTION_ALL,
+  PAYMENT_ALL
 };
