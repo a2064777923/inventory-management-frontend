@@ -72,8 +72,14 @@ const BANK_DELETE = '/api/bank/bank-delete'
 const COLLECTION_CREATE = '/api/payment/collection-sheet-make';
 const PAYMENT_CREATE = '/api/payment/payment-sheet-make';
 const COLLECTION_ALL = '/api/payment/collection-get-all';
-const PAYMENT_ALL ='/api/payment/payment-get-all'
+const PAYMENT_ALL ='/api/payment/payment-get-all';
 const TRANSFERMENT_APPROVAL = '/api/payment/transfer-sheet-approval';
+//工资单
+const SALARY_SHEET_ALL = 'api/salary/salary-sheet-all';
+const SALARY_SHEET_CREATE = 'api/salary/salary-sheet-make';
+const SALARY_SHEET_APPROVAL = 'api/salary/salary-sheet-approval';
+//全部
+const STAFF_INFO_ALL = 'api/salary/staff-info-all';
 
 module.exports = {
   TEST_GET,
@@ -135,5 +141,9 @@ module.exports = {
   PAYMENT_CREATE,
   TRANSFERMENT_APPROVAL,
   COLLECTION_ALL,
-  PAYMENT_ALL
+  PAYMENT_ALL,
+  SALARY_SHEET_ALL,
+  SALARY_SHEET_CREATE,
+  SALARY_SHEET_APPROVAL,
+  STAFF_INFO_ALL
 };
