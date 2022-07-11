@@ -23,8 +23,10 @@ const InventoryWarning = () => import("../views/inventory/InventoryWarning");
 const PurchaseView = () => import("../views/purchase/PurchaseView");
 const PurchaseReturnView = () => import("../views/purchase/PurchaseReturnView");
 const SaleView = () => import("../views/sale/SaleView");
+const SaleReturnView = () => import("../views/sale/SaleReturnView");
 const CustomerView = () => import ("../views/purchase/CustomerView");
 const Approval = () => import("../views/approval/Approval");
+const MakeDiscount = ()=>import("../views/discount/MakeDiscount");
 
 //author:Hong ZiXian//Date:2022/06/28
 const FinancialView = () => import("../views/financial/FinancialView");
@@ -34,6 +36,8 @@ const SalesDetails = () => import("../views/financial/SalesDetails");
 const BusinessHistory = () => import("../views/financial/BusinessHistory");
 const BusinessSituation = () => import("../views/financial/BusinessSituation");
 const OpeningAccountEstablishment = () => import("../views/financial/OpeningAccountEstablishment");
+
+const HumansourseView = () => import("../views/humansourse/HumansourseView");
 
 
 Vue.use(VueRouter);
@@ -143,6 +147,12 @@ const routes = [
     name: "SaleView",
     meta: { requiresAuth: PATH.SALE_VIEW.requiresAuth }
   },
+    {
+      path: PATH.SALE_RETURN_VIEW.path,
+      component: SaleReturnView,
+      name: "SaleReturnView",
+      mata: { requiresAuth: PATH.SALE_RETURN_VIEW.requiresAuth}
+    },
   {
     path: PATH.CUSTOMER_VIEW.path,
     component: CustomerView,
@@ -154,6 +164,12 @@ const routes = [
     path: PATH.GM_APPROVAL.path,
     component: Approval,
     meta: { requiresAuth: PATH.GM_APPROVAL.requiresAuth }
+  },
+ //制定促销策略
+  {
+	  path: PATH.DISCOUNT_MAKE.path,
+	  component: MakeDiscount,
+	  meta: {requiresAuth:PATH.DISCOUNT_MAKE.requiresAuth}
   },
   //author:Hong ZiXian  //Date:2022/06/28
   //财務
@@ -198,6 +214,12 @@ const routes = [
      component: OpeningAccountEstablishment,
      name : "OpeningAccountEstablishment",
      meta:{requiresAuth : PATH.OPENING_ACCOUNT_ESTABLISHMENT.requiresAuth},
+  },
+  {
+     path: PATH.HUMAN_SOURSE_VIEW.path,
+     component: HumansourseView,
+     name : "HumansourseView",
+     meta:{requiresAuth : PATH.HUMAN_SOURSE_VIEW.requiresAuth},
   },
 
   // -----------------------未找到页面-----------------------------

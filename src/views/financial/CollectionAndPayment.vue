@@ -174,6 +174,12 @@
               item.id = null
               item.transferSheetId = null
               item.quantity
+              var numReg = /^[0-9]*$/
+              var numRe = new RegExp(numReg)
+              
+              if (!numRe.test(item.amount)) {
+                this.$message.error('請輸入正确的金额!')
+              }
             })
             if(this.paymentForm.transferType === "get"){
               createCollectionSheet(this.paymentForm).then(_res =>{

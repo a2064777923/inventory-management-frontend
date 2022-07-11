@@ -78,10 +78,21 @@ export const PATH = {
     path: '/saleView',
     requiresAuth: [ROLE.SALE_STAFF,ROLE.SALE_MANAGER,ROLE.GM,ROLE.ADMIN]
   },
+    //销售退货
+    //Author: Sun Sihan
+  SALE_RETURN_VIEW: {
+      path: '/saleReturnView',
+      requiresAuth: [ROLE.SALE_STAFF,ROLE.SALE_MANAGER,ROLE.GM,ROLE.ADMIN]
+    },
   CUSTOMER_VIEW: {
     path: '/customerView',
     requiresAuth: [ROLE.SALE_STAFF,ROLE.SALE_MANAGER,ROLE.GM,ROLE.ADMIN]
   },
+    // 制定促销策略
+    DISCOUNT_MAKE: {
+  	  path:'/makeDiscount',
+  	  requiresAuth: [ROLE.GM, ROLE.ADMIN]
+    },
 
   // GM
   GM_APPROVAL: {
@@ -120,5 +131,9 @@ export const PATH = {
     path:'/openingAccountEstablishment',
     requiresAuth:[ROLE.FINANCIAL_STAFF,ROLE.GM,ROLE.ADMIN]
   },
+  HUMAN_SOURSE_VIEW:{
+    path:'/humansourseView',
+    requiresAuth:[ROLE.HR,ROLE.GM,ROLE.ADMIN]
+  }
   
 }

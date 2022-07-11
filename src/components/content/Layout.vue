@@ -97,6 +97,14 @@
             <i class="el-icon-sell"></i>
             <span slot="title">销售管理</span>
           </el-menu-item>
+          
+          <el-menu-item
+            :index="PATH.SALE_RETURN_VIEW.path"
+            v-if="permit(PATH.SALE_RETURN_VIEW.requiresAuth)">
+          <i class="el-icon-sell"></i>
+          <span slot="title">销售退货管理</span>
+          </el-menu-item>
+                    
           <el-menu-item
             :index="PATH.CUSTOMER_VIEW.path"
             v-if="permit(PATH.CUSTOMER_VIEW.requiresAuth)"
@@ -180,6 +188,32 @@
 
           
         </el-submenu>
+        <el-submenu index="6"
+        					v-if="permit(PATH.DISCOUNT_MAKE.requiresAuth)">
+        			<template slot="title">
+        				<i class="el-icon-receiving"></i>
+        				<span slot="title">制定促销策略</span>
+        			</template>
+        			<el-menu-item
+        				:index="PATH.DISCOUNT_MAKE.path"
+        				v-if="permit(PATH.DISCOUNT_MAKE.requiresAuth)">
+        				<i class="el-icon-receiving"></i>
+        				<span slot="title">促销策略</span>
+        			</el-menu-item>
+        		</el-submenu>
+            <el-submenu index="7"
+            					v-if="permit(PATH.HUMAN_SOURSE_VIEW.requiresAuth)">
+            			<template slot="title">
+            				<i class="el-icon-user-solid"></i>
+            				<span slot="title">人力资源</span>
+            			</template>
+            			<el-menu-item
+            				:index="PATH.HUMAN_SOURSE_VIEW.path"
+            				v-if="permit(PATH.HUMAN_SOURSE_VIEW.requiresAuth)">
+            				<i class="el-icon-user"></i>
+            				<span slot="title">员工管理登記</span>
+            			</el-menu-item>
+            		</el-submenu>
       </el-menu>
       <div class="logout-fix">
         <el-tooltip

@@ -87,7 +87,7 @@
         </el-form-item>
         <el-form-item label = "金 额">
           <el-col :span="40">
-            <el-input v-model = "editForm.amount" placeholder="請輸入賬戶金额" type="number"></el-input>
+            <el-input v-model = "editForm.amount" placeholder="請輸入賬戶金额" type="number" :readonly="true"></el-input>
           </el-col>
         </el-form-item>
       </el-form>
